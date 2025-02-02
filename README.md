@@ -4,7 +4,7 @@ The complete **TypeScript course** will have around **15 chapters**, covering ev
 
 ### **📚 TypeScript Course Outline (15 Chapters)**
 1️⃣ [**Introduction to TypeScript**](https://github.com/musarafhossain/TypeScript-Notes/tree/main/1_Introduction%20to%20TypeScript)  
-2️⃣ **Basic Types in TypeScript** *(Numbers, Strings, Arrays, Enums, etc.)*  
+2️⃣ [**Basic Types in TypeScript** *(Numbers, Strings, Arrays, Enums, etc.)*](https://github.com/musarafhossain/TypeScript-Notes/tree/main/2_Basic%20Types%20in%20TypeScript)  
 3️⃣ **Functions and Type Annotations** *(Return types, Optional & Default Parameters, Overloads)*  
 4️⃣ **Interfaces and Type Aliases** *(Extending, Merging, Differences)*  
 5️⃣ **Classes and Object-Oriented Programming** *(Inheritance, Access Modifiers, Abstract Classes)*  

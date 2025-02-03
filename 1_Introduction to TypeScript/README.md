@@ -114,6 +114,7 @@ tsc --init
 ```
 
 3. **Create a file `converter.ts` and write the following code:**
+
 ```ts
 function celsiusToFahrenheit(celsius: number): number {
     return (celsius * 9/5) + 32;
@@ -128,6 +129,7 @@ console.log(`86°F to Celsius: ${fahrenheitToCelsius(86)}°C`);
 ```
 
 4. **Compile and run the program:**
+
 ```bash
 tsc
 node converter.js

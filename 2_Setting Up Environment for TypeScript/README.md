@@ -93,5 +93,10 @@ ts-project/
 ```bash
 npx tsc
 ```
+**Compile TypeScript and Realtime Watch**
+
+```bash
+npx tsc --watch
+```
 
 * Compiles `src/index.ts` → `dist/index.js`

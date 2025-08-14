@@ -89,8 +89,81 @@ console.log(format(42));      // "42.00"
 
 ---
 
-💡 **When to use Functions in TypeScript:**
+#### ✅ **Object Destructuring in Function Parameters**
 
-* For code reusability and modularity.
-* To enforce strict type contracts for inputs and outputs.
-* To make code predictable and error-free.
+You can **destructure objects directly in function parameters** and type them in TypeScript.
+This is especially useful with nested objects or promises.
+
+**Basic destructuring with type annotation:**
+
+```ts
+type User = { name: string; age: number };
+
+function greetUser({ name, age }: { name: string; age: number }) {
+  console.log(`Hello, ${name}. You are ${age} years old.`);
+}
+
+greetUser({ name: "Alice", age: 25 });
+```
+
+**Destructuring in arrow functions:**
+
+```ts
+const greetUserArrow = ({ name, age }: { name: string; age: number }) => {
+  console.log(`Hello, ${name}, age ${age}`);
+};
+
+greetUserArrow({ name: "Bob", age: 30 });
+```
+
+**Destructuring a Promise object in async function:**
+
+```ts
+type ParamsType = { slug: string };
+
+const page = async ({ params }: { params: Promise<ParamsType> }) => {
+  const { slug } = await params; // destructure after promise resolves
+  console.log(`Slug: ${slug}`);
+};
+
+// Example usage
+const p: Promise<ParamsType> = Promise.resolve({ slug: "my-page" });
+page({ params: p });
+```
+
+**Nested destructuring:**
+
+```ts
+type Data = { user: { name: string; age: number } };
+
+function showUser({ data }: { data: Data }) {
+  const { user: { name, age } } = data;
+  console.log(name, age);
+}
+
+showUser({ data: { user: { name: "Alice", age: 25 } } });
+```
+
+**Generic destructuring with promises:**
+
+```ts
+const handle = async <T>({ payload }: { payload: Promise<T> }) => {
+  const data = await payload;
+  console.log(data);
+};
+
+handle({ payload: Promise.resolve({ id: 1, name: "Test" }) });
+```
+
+---
+
+💡 **When to use object destructuring in function parameters:**
+
+* To extract only the properties you need.
+* To combine with **type safety** in TypeScript.
+* To simplify handling of promises or nested objects.
+* To make code concise and readable.
+
+---
+
+Do you want me to **add a visual diagram showing destructuring + async + promises**? It helps make this concept super clear.
